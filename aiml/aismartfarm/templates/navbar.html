@@ -194,65 +194,51 @@
         <div class="ai-section">
 
             <label class="ai-label">
-                ⚙️ 파이프라인 스레드
+                파이프라인 스레드
             </label>
 
             <div class="ai-pipeline-list">
-
                 <div id="step-text-gen"
                      onclick="triggerSinglePipeline('text-gen')"
                      class="ai-pipeline-card">
-
                     <span>📝 텍스트 생성</span>
                     <span class="status-icon">대기</span>
-
                 </div>
 
                 <div id="step-translation"
                      onclick="triggerSinglePipeline('translation')"
                      class="ai-pipeline-card">
-
                     <span>🌐 번역</span>
                     <span class="status-icon">대기</span>
-
                 </div>
 
                 <div id="step-sentiment"
                      onclick="triggerSinglePipeline('sentiment')"
                      class="ai-pipeline-card">
-
                     <span>❤️ 감성 분석</span>
                     <span class="status-icon">대기</span>
-
                 </div>
 
                 <div id="step-ner"
                      onclick="triggerSinglePipeline('ner')"
                      class="ai-pipeline-card">
-
                     <span>🔍 개체명 분석</span>
                     <span class="status-icon">대기</span>
-
                 </div>
 
                 <div id="step-qna"
                      onclick="triggerSinglePipeline('qna')"
                      class="ai-pipeline-card">
-
                     <span>❓ QnA</span>
                     <span class="status-icon">대기</span>
-
                 </div>
-
             </div>
-
         </div>
 
         <!-- 결과 -->
         <div class="ai-section">
-
             <label class="ai-label">
-                📊 SLM 실시간 결과
+                SLM 실시간 결과
             </label>
 
             <div class="ai-result-card">
@@ -279,32 +265,25 @@
                 <div class="ai-result-title">❓ QnA</div>
                 <div id="res-qna">진단 전</div>
             </div>
-
         </div>
-
     </div>
 
     <!-- 하단 -->
     <div class="ai-sidebar-footer">
-
         <button
             onclick="startAllPipelines()"
             class="ai-run-btn">
-
-            🚀 통합 AI 진단 시작
-
+            통합 AI 진단 시작
         </button>
-
     </div>
-
 </aside>
-<style>
 
+<style>
 .ai-sidebar{
     position:fixed;
     top:64px;
     right:0;
-    width:320px;
+    width:200px;
     height:calc(100vh - 64px);
 
     background:#ffffff;
@@ -549,7 +528,6 @@
         opacity:1;
     }
 }
-
 </style>
 
 <script>
