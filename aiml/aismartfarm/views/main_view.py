@@ -205,3 +205,24 @@ def signup():
         return redirect(url_for('main.index'))  # 메인 페이지로 이동
 
     return render_template('main/signup.html', form=form)
+
+@bp.route('/ai/text-gen')
+def ai_text_gen_page():
+    # templates/ai/text_gen.html 화면을 브라우저에 뿌려줍니다.
+    return render_template('ai/text_gen.html')
+
+@bp.route('/ai/translation')
+def ai_translation_page():
+    return render_template('ai/translation.html')
+
+@bp.route('/ai/sentiment')
+def ai_sentiment_page():
+    return render_template('ai/sentiment.html')
+
+@bp.route('/ai/ner')
+def ai_ner_page():
+    return render_template('ai/ner.html')
+
+@bp.route('/ai/qna')
+def ai_qna_page():
+    return render_template('ai/qna.html')

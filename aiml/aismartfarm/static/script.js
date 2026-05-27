@@ -1,1 +1,1 @@
- console.log('flask+frontend소스작동완료!');
+console.log('flask+fastapi+frontend소스작동완료!');

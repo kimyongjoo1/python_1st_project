@@ -19,7 +19,7 @@
 	<div class="tailwind">
 		<div id="fig-code-root" style="height: 100%;">
 			<div class="min-h-screen flex flex-col">
-				<nav class="border-b bg-white sticky top-0 z-50">
+				<!--<nav class="border-b bg-white sticky top-0 z-50">
 				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div class="flex justify-between items-center h-16">
 						<a class="flex items-center gap-3" href="/" data-discover="true"><img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=100&amp;h=100&amp;fit=crop" alt="파프리카 스마트팜 로고" class="h-10 w-10 rounded-full object-cover"><span class="font-bold text-xl text-emerald-600">파프리카 스마트팜 AI</span></a>
@@ -40,7 +40,32 @@
                         {% endif %}
                     </div>
 				</div>
-				</nav><main class="flex-1">
+				</nav>-->
+				<nav class="border-b bg-white sticky top-0 z-40 h-16">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex justify-between items-center h-full">
+         <a class="flex items-center gap-3" href="/">
+            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=100&amp;h=100&amp;fit=crop" alt="파프리카 스마트팜 로고" class="h-10 w-10 rounded-full object-cover">
+            <span class="font-bold text-xl text-emerald-600">파프리카 스마트팜 AI</span>
+         </a>
+         <div class="hidden md:flex items-center gap-8">
+            <a href="#services" class="text-sm font-medium text-gray-700 hover:text-emerald-600 transition">서비스</a>
+            <a href="#features" class="text-sm font-medium text-gray-700 hover:text-emerald-600 transition">특징</a>
+            <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-emerald-600 transition">문의</a>
+         </div>
+         <div class="flex items-center gap-4 text-sm font-medium">
+            {% if g.user %}
+               <span class="text-gray-600 font-semibold">{{ g.user.mem_name }}님</span>
+               <a href="{{ url_for('main.logout') }}" class="text-red-500 hover:text-red-700 transition">(로그아웃)</a>
+            {% else %}
+               <a href="{{ url_for('main.login') }}" class="text-gray-700 hover:text-emerald-600 transition">로그인</a>
+               <a href="{{ url_for('main.signup') }}" class="bg-emerald-600 text-white px-3 py-1.5 rounded-md hover:bg-emerald-700 transition">회원가입</a>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+</nav>
+				<main class="flex-1">
 				<div class="min-h-screen flex">
 					<div class="hidden lg:flex lg:w-1/2 bg-emerald-600 items-center justify-center p-12">
 						<div class="max-w-md text-white">
