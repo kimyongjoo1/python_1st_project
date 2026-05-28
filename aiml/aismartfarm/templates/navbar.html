@@ -625,17 +625,24 @@ function renderResult(key, data) {
     resContainer.classList.remove('text-gray-400', 'italic');
     resContainer.classList.add('text-gray-800', 'font-medium');
 
+    // 1. 텍스트 생성 (기획서 명세: output_text 파싱)
     if (key === 'text-gen') {
-        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border leading-relaxed">${data.output}</p>`;
-    } else if (key === 'translation') {
+        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border leading-relaxed">${data.output_text}</p>`;
+    }
+    // 2. 다국어 번역 (기획서 명세: translated_text 파싱)
+    else if (key === 'translation') {
         resContainer.innerHTML = `
             <div class="bg-white p-2 rounded border text-[10px] text-gray-400 mb-1">Language: ${data.src_lang} ➔ ${data.tgt_lang}</div>
-            <p class="bg-white p-2.5 rounded border text-emerald-700 font-semibold">${data.output}</p>
+            <p class="bg-white p-2.5 rounded border text-emerald-700 font-semibold">${data.translated_text}</p>
         `;
-    } else if (key === 'sentiment') {
+    }
+    // 3. 감성 분석 (기획서 명세: label / score 파싱)
+    else if (key === 'sentiment') {
         const color = data.label.includes('긍정') ? 'text-blue-600' : 'text-red-600';
-        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border">결과: <span class="${color} font-bold">${data.label}</span> (신뢰도: <span class="underline">${data.score}%</span>)</p>`;
-    } else if (key === 'ner') {
+        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border">결과: <span class="${color} font-bold">${data.label}</span> (신뢰도: <span class="underline">${data.score}점</span>)</p>`;
+    }
+    // 4. 개체명 인식 (기획서 명세: entities 배열 파싱)
+    else if (key === 'ner') {
         let tableHtml = `
             <table class="w-full text-left border-collapse bg-white rounded border text-xs mt-1 shadow-sm">
                 <thead>
@@ -647,12 +654,14 @@ function renderResult(key, data) {
         });
         tableHtml += `</tbody></table>`;
         resContainer.innerHTML = tableHtml;
-    } else if (key === 'qna') {
+    }
+    // 5. 질의응답 (기획서 명세: answer / score / start / end 파싱)
+    else if (key === 'qna') {
         resContainer.innerHTML = `
             <div class="bg-white p-3 rounded border shadow-sm space-y-1">
-                <span class="text-[10px] text-gray-400 block font-mono">범위: [${data.start} ~ ${data.end}]</span>
-                <p class="text-sm">정답 파싱: <span class="bg-yellow-100 px-1.5 py-0.5 rounded font-bold text-gray-900 border border-yellow-200">${data.answer}</span></p>
-                <p class="text-[11px] text-emerald-600">정확도: ${(data.score * 100).toFixed(2)}%</p>
+                <span class="text-[10px] text-gray-400 block font-mono">좌표 [Position]: [${data.start} : ${data.end}]</span>
+                <p class="text-sm">추출된 정답: <span class="bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold border border-emerald-200">${data.answer}</span></p>
+                <p class="text-[11px] text-emerald-600">확신도 (Score): ${(data.score * 100).toFixed(2)}%</p>
             </div>`;
     }
 }
