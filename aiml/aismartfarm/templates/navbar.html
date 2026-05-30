@@ -6,42 +6,13 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
     <title>파프리카 재배 스마트팜 헤더</title>
-    <!--<script src="{{url_for('static', filename='script.js')}}" crossorigin="anonymous"></script>
-    <script src="https://www.figma.com/webpack-artifacts/assets/code_components_preview_iframe-62f6d3c6ad9efdf0.min.js.br" crossorigin="anonymous"></script>-->
     <link rel="stylesheet" href="{{url_for('static', filename='style.min.css')}}">
     <style id="reset-css">
      @layer figreset,figoverridable,reset,theme,base,figutils,components,utilities;@layer figoverridable{:root{font-synthesis:none}}@layer figutils{:root{--banner-height:48px;--banner-height-v2:40px;--full-height-with-banner:calc(100dvh - var(--banner-height))}@media (max-width:600px){.banner-v2-container{left:0 !important;right:0 !important;margin:0 auto !important}}.wrapper-with-banner .min-h-screen{min-height:var(--full-height-with-banner)}.wrapper-with-banner .h-screen{height:var(--full-height-with-banner)}}
     </style>
 </head>
 <body>
-<!--<nav class="border-b bg-white sticky top-0 z-50" data-fg-cqpb0="30.76:76.12:/src/app/components/Navbar.tsx:19:5:532:5767:e:nav:etxtx:1" data-fgid-cqpb0=":r4:" data-fg-callsite-dpte1="">
-				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-fg-cqpb1="30.76:76.12:/src/app/components/Navbar.tsx:20:7:592:2780:e:div:e" data-fgid-cqpb1=":r5:">
-					<div class="flex justify-between items-center h-16" data-fg-cqpb2="30.76:76.12:/src/app/components/Navbar.tsx:21:9:657:2702:e:div:xtetxtetxtetxte" data-fgid-cqpb2=":r6:">
-						<a class="flex items-center gap-3" data-fg-cqpb4="30.76:76.12:/src/app/components/Navbar.tsx:23:11:745:396:e:Link:ete:::::B0gV" data-fgid-cqpb4=":r7:" href="/" data-discover="true"><img src="https://t1.daumcdn.net/brunch/service/user/1jpV/image/6h4K6IF-odowiAHdjQqKNk3LLLQ.jpg" alt="파프리카 스마트팜 로고" class="h-10 w-10 rounded-full object-cover" data-fg-cqpb5="30.76:76.12:/src/app/components/Navbar.tsx:24:13:807:231:e:ImageWithFallback::::::BDpS" data-fgid-cqpb5=":r8:" data-fg-csfh3="21.8:21.1153:/src/app/components/figma/ImageWithFallback.tsx:25:5:1051:95:e:img" data-fgid-csfh3=":r9:"><span class="font-bold text-xl text-emerald-600" data-fg-cqpb6="30.76:76.12:/src/app/components/Navbar.tsx:29:13:1051:72:e:span:t" data-fgid-cqpb6=":ra:">파프리카 스마트팜 AI</span></a>
-						<div class="hidden md:flex items-center gap-8" data-fg-cqpb9="30.76:76.12:/src/app/components/Navbar.tsx:33:11:1182:1062:e:div:x" data-fgid-cqpb9=":rb:">
-							<a href="#services" class="text-gray-700 hover:text-emerald-600 transition" data-fg-cqpb19="30.76:76.12:/src/app/components/Navbar.tsx:48:17:1794:123:e:a:t" data-fgid-cqpb19=":rc:">서비스</a><a href="#features" class="text-gray-700 hover:text-emerald-600 transition" data-fg-cqpb21="30.76:76.12:/src/app/components/Navbar.tsx:51:17:1934:122:e:a:t" data-fgid-cqpb21=":rd:">특징</a><a href="#contact" class="text-gray-700 hover:text-emerald-600 transition" data-fg-cqpb23="30.76:76.12:/src/app/components/Navbar.tsx:54:17:2073:121:e:a:t" data-fgid-cqpb23=":re:">문의</a>
-						</div>
-                        {% if g.user %}
-                        <div class="hidden md:flex items-center gap-4" data-fg-cqpb26="30.76:76.12:/src/app/components/Navbar.tsx:62:11:2286:734:e:div:x" data-fgid-cqpb26=":rf:">
-						    <a href="{{ url_for('main.logout')}}">{{g.user.mem_email}} (로그아웃)</a>
-                        </div>
-                        {% else %}
-						<div class="hidden md:flex items-center gap-4" data-fg-cqpb26="30.76:76.12:/src/app/components/Navbar.tsx:62:11:2286:734:e:div:x" data-fgid-cqpb26=":rf:">
-							<button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-9 px-4 py-2 has-[&gt;svg]:px-3" data-fg-cqpb36="30.76:76.12:/src/app/components/Navbar.tsx:73:17:2735:107:e:Button:t::::s:BNeg:1" data-fgid-cqpb36=":rg:" data-fg-csem0="21.16:21.2106:/src/app/components/ui/button.tsx:50:5:1941:121:e:Comp::1" data-fgid-csem0=":rh:" data-fg-callsite-cqpb36="" onclick="location.href='/login'">로그인</button><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3" data-fg-cqpb38="30.76:76.12:/src/app/components/Navbar.tsx:76:17:2859:111:e:Button:t::::s:BNeg:1" data-fgid-cqpb38=":ri:" data-fg-csem0="21.16:21.2106:/src/app/components/ui/button.tsx:50:5:1941:121:e:Comp::1" data-fgid-csem0=":rj:" data-fg-callsite-cqpb38="" onclick="location.href='/signup'">회원가입</button>
-						</div>
-						<button class="md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6" data-fg-cqpb44="30.76:76.12:/src/app/components/Navbar.tsx:91:15:3281:28:e:Menu::::::D5X5" data-fgid-cqpb44=":rl:"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
-                        {% endif %}
-                        {% if g.user %}
-                            <a href="{{ url_for('main.logout') }}">
-                                {{ g.user.mem_name }}님 (로그아웃)
-                            </a>
-                        {% else %}
-                            <a href="{{ url_for('main.login') }}">로그인</a>
-                            <a href="{{ url_for('main.signup') }}">회원가입</a>
-                        {% endif %}
-                    </div>
-				</div>
-				</nav>-->
+
 <nav class="border-b bg-white sticky top-0 z-40 h-16">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
       <div class="flex justify-between items-center h-full">
@@ -67,479 +38,95 @@
    </div>
 </nav>
 
-<!--<main class="min-h-[calc(100vh-4rem)] bg-gray-50 pr-80 p-8">
-   <div class="max-w-4xl mx-auto space-y-6">
-
-      <div class="bg-white p-6 rounded-2xl border shadow-sm space-y-3">
-         <div class="flex justify-between items-center">
-            <h2 class="text-base font-bold text-gray-800 flex items-center gap-2">
-               🌿 파프리카 스마트팜 AI 분석 요청
-            </h2>
-            <span class="text-[11px] text-gray-400 font-medium">FastAPI 하이퍼 루프 스레드 연결됨</span>
-         </div>
-
-         <div class="relative">
-            <textarea id="ai-input-text" rows="3" class="w-full p-4 pr-14 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:outline-none text-xs leading-relaxed" placeholder="분석하거나 생성할 스마트팜 문장을 자유롭게 입력해 주세요. (예: 스마트팜 파프리카 자동 재배 시스템 설비 도입 효과 점검)"></textarea>
-
-            <button onclick="startAllPipelines()" class="absolute right-3 bottom-4 p-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 active:scale-95 transition-all shadow-sm group" title="일괄 인공지능 분석 전송">
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </button>
-         </div>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl border shadow-sm">
-         <h2 class="text-base font-bold text-gray-800 mb-4 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 5-Core SLM 실시간 응답 보드
-         </h2>
-
-         <div class="grid grid-cols-1 gap-4 text-xs">
-            <div class="p-4 bg-gray-50 rounded-xl border border-dashed border-gray-200 transition duration-300">
-               <span class="font-bold text-gray-700 block mb-1.5">📝 1. Text Generation 결과</span>
-               <div id="res-text-gen" class="text-gray-400 italic">아직 진단 전입니다. 입력창 오른편의 전송 아이콘이나 우측 내비게이션 바 메뉴를 클릭하세요.</div>
-            </div>
-            <div class="p-4 bg-gray-50 rounded-xl border border-dashed border-gray-200 transition duration-300">
-               <span class="font-bold text-gray-700 block mb-1.5">🌐 2. Translation 결과</span>
-               <div id="res-translation" class="text-gray-400 italic">아직 진단 전입니다. 입력창 오른편의 전송 아이콘이나 우측 내비게이션 바 메뉴를 클릭하세요.</div>
-            </div>
-            <div class="p-4 bg-gray-50 rounded-xl border border-dashed border-gray-200 transition duration-300">
-               <span class="font-bold text-gray-700 block mb-1.5">❤️ 3. Sentiment Analysis 결과</span>
-               <div id="res-sentiment" class="text-gray-400 italic">아직 진단 전입니다. 입력창 오른편의 전송 아이콘이나 우측 내비게이션 바 메뉴를 클릭하세요.</div>
-            </div>
-            <div class="p-4 bg-gray-50 rounded-xl border border-dashed border-gray-200 transition duration-300">
-               <span class="font-bold text-gray-700 block mb-1.5">🔍 4. NER (개체명 인식) 테이블 결과</span>
-               <div id="res-ner" class="text-gray-400 overflow-x-auto">아직 진단 전입니다. 입력창 오른편의 전송 아이콘이나 우측 내비게이션 바 메뉴를 클릭하세요.</div>
-            </div>
-            <div class="p-4 bg-gray-50 rounded-xl border border-dashed border-gray-200 transition duration-300">
-               <span class="font-bold text-gray-700 block mb-1.5">❓ 5. QnA 질의응답 결과</span>
-               <div id="res-qna" class="text-gray-400 italic">아직 진단 전입니다. 입력창 오른편의 전송 아이콘이나 우측 내비게이션 바 메뉴를 클릭하세요.</div>
-            </div>
-         </div>
-      </div>
-
-   </div>
-</main>-->
-
-<!--<div class="fixed top-16 right-0 h-[calc(100vh-4rem)] z-50 flex items-stretch">-->
-
-   <!--<div id="ai-result-drawer" class="w-96 bg-gray-50 border-l border-gray-200 p-5 flex flex-col justify-between shadow-2xl transform translate-x-full transition-transform duration-300 pointer-events-auto">
-      <div class="flex items-center justify-between border-b pb-3 shrink-0">
-         <h3 class="text-xs font-bold text-gray-700 flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> SLM 실시간 응답 분석 보드
-         </h3>
-         <button onclick="toggleDrawer(false)" class="text-gray-400 hover:text-gray-600 text-xs font-bold p-1">✕ 닫기</button>
-      </div>
-
-      <div class="flex-1 overflow-y-auto my-4 space-y-4 pr-1 custom-scrollbar text-[11px]">
-         <div class="p-3 bg-white rounded-xl border border-gray-100 shadow-sm">
-            <span class="font-bold text-gray-600 block mb-1">📝 1. Text Generation 결과</span>
-            <div id="res-text-gen" class="text-gray-400 italic">대기 중...</div>
-         </div>
-         <div class="p-3 bg-white rounded-xl border border-gray-100 shadow-sm">
-            <span class="font-bold text-gray-600 block mb-1">🌐 2. Translation 결과</span>
-            <div id="res-translation" class="text-gray-400 italic">대기 중...</div>
-         </div>
-         <div class="p-3 bg-white rounded-xl border border-gray-100 shadow-sm">
-            <span class="font-bold text-gray-600 block mb-1">❤️ 3. Sentiment Analysis 결과</span>
-            <div id="res-sentiment" class="text-gray-400 italic">대기 중...</div>
-         </div>
-         <div class="p-3 bg-white rounded-xl border border-gray-100 shadow-sm">
-            <span class="font-bold text-gray-600 block mb-1">🔍 4. NER 개체명 테이블 결과</span>
-            <div id="res-ner" class="text-gray-400 overflow-x-auto custom-scrollbar">대기 중...</div>
-         </div>
-         <div class="p-3 bg-white rounded-xl border border-gray-100 shadow-sm">
-            <span class="font-bold text-gray-600 block mb-1">❓ 5. QnA 질의응답 결과</span>
-            <div id="res-qna" class="text-gray-400 italic">대기 중...</div>
-         </div>
-      </div>
-   </div>-->
-
-   <!-- ================================================================= -->
-<!-- 📌 [최종 완성] 모든 내용(입력+단추+결과)이 우측 바 내부로 들어간 AI 내비게이션 바 -->
-<!-- ================================================================= -->
 <aside class="ai-sidebar">
 
-    <!-- 상단 -->
     <div class="ai-sidebar-header">
-
         <div class="ai-live-wrap">
-            <!--<span class="ai-live-dot"></span>-->
-
-            <span class="ai-title">
-                Navigation Bar
-            </span>
+            <span class="ai-live-dot"></span>
+            <span class="ai-title">Navigation Thread</span>
         </div>
-
     </div>
 
-    <!-- 스크롤 영역 -->
     <div class="ai-sidebar-body custom-scrollbar">
 
-        <!-- 입력 -->
         <div class="ai-section">
-
-            <label class="ai-label">
-                🌿 스마트팜 분석 문장 입력
-            </label>
-
+            <label class="ai-label">🌿 스마트팜 분석 문장 입력</label>
             <textarea
                 id="ai-input-text"
                 rows="3"
                 class="ai-textarea"
-                placeholder="분석할 내용을 입력하세요..."
+                placeholder="분석하거나 생성할 스마트팜 문장을 자유롭게 입력해 주세요..."
             ></textarea>
-
         </div>
 
-        <!-- 파이프라인 -->
         <div class="ai-section">
-
-            <label class="ai-label">
-                파이프라인 스레드
-            </label>
-
+            <label class="ai-label">⚙️ 파이프라인 스레드</label>
             <div class="ai-pipeline-list">
-                <div id="step-text-gen"
-                     onclick="triggerSinglePipeline('text-gen')"
-                     class="ai-pipeline-card">
-                    <span>📝 텍스트 생성</span>
-                    <span class="status-icon">대기</span>
+                <div id="step-text-gen" onclick="triggerSinglePipeline('text-gen')" class="ai-pipeline-card status-ready">
+                    <span class="ai-card-text">📝 텍스트 생성</span>
+                    <span class="status-icon">대기중</span>
                 </div>
 
-                <div id="step-translation"
-                     onclick="triggerSinglePipeline('translation')"
-                     class="ai-pipeline-card">
-                    <span>🌐 번역</span>
-                    <span class="status-icon">대기</span>
+                <div id="step-translation" onclick="triggerSinglePipeline('translation')" class="ai-pipeline-card status-ready">
+                    <span class="ai-card-text">🌐 다국어 번역</span>
+                    <span class="status-icon">대기중</span>
                 </div>
 
-                <div id="step-sentiment"
-                     onclick="triggerSinglePipeline('sentiment')"
-                     class="ai-pipeline-card">
-                    <span>❤️ 감성 분석</span>
-                    <span class="status-icon">대기</span>
+                <div id="step-sentiment" onclick="triggerSinglePipeline('sentiment')" class="ai-pipeline-card status-ready">
+                    <span class="ai-card-text">❤️ 감성 분석</span>
+                    <span class="status-icon">대기중</span>
                 </div>
 
-                <div id="step-ner"
-                     onclick="triggerSinglePipeline('ner')"
-                     class="ai-pipeline-card">
-                    <span>🔍 개체명 분석</span>
-                    <span class="status-icon">대기</span>
+                <div id="step-ner" onclick="triggerSinglePipeline('ner')" class="ai-pipeline-card status-ready">
+                    <span class="ai-card-text">🔍 개체명(NER)</span>
+                    <span class="status-icon">대기중</span>
                 </div>
 
-                <div id="step-qna"
-                     onclick="triggerSinglePipeline('qna')"
-                     class="ai-pipeline-card">
-                    <span>❓ QnA</span>
-                    <span class="status-icon">대기</span>
+                <div id="step-qna" onclick="triggerSinglePipeline('qna')" class="ai-pipeline-card status-ready">
+                    <span class="ai-card-text">❓ 질의응답(QnA)</span>
+                    <span class="status-icon">대기중</span>
                 </div>
             </div>
         </div>
 
-        <!-- 결과 -->
-        <div class="ai-section">
-            <label class="ai-label">
-                SLM 실시간 결과
-            </label>
+        <div class="ai-section" style="border-top: 1px solid #f1f5f9; padding-top: 16px;">
+            <label class="ai-label" style="margin-top: 12px;">📊 SLM 실시간 분석 결과</label>
 
             <div class="ai-result-card">
-                <div class="ai-result-title">📝 Text Generation</div>
-                <div id="res-text-gen">진단 전</div>
+                <div class="ai-result-title">📝 1. Text Generation 결과</div>
+                <div id="res-text-gen" class="ai-res-content text-gray-400 italic">진단 전</div>
             </div>
 
             <div class="ai-result-card">
-                <div class="ai-result-title">🌐 Translation</div>
-                <div id="res-translation">진단 전</div>
+                <div class="ai-result-title">🌐 2. Translation 결과</div>
+                <div id="res-translation" class="ai-res-content text-gray-400 italic">진단 전</div>
             </div>
 
             <div class="ai-result-card">
-                <div class="ai-result-title">❤️ Sentiment</div>
-                <div id="res-sentiment">진단 전</div>
+                <div class="ai-result-title">❤️ 3. Sentiment Analysis 결과</div>
+                <div id="res-sentiment" class="ai-res-content text-gray-400 italic">진단 전</div>
             </div>
 
             <div class="ai-result-card">
-                <div class="ai-result-title">🔍 NER</div>
-                <div id="res-ner">진단 전</div>
+                <div class="ai-result-title">🔍 4. NER 개체명 테이블 결과</div>
+                <div id="res-ner" class="ai-res-content text-gray-400 overflow-x-auto custom-scrollbar">진단 전</div>
             </div>
 
             <div class="ai-result-card">
-                <div class="ai-result-title">❓ QnA</div>
-                <div id="res-qna">진단 전</div>
+                <div class="ai-result-title">❓ 5. QnA 질의응답 결과</div>
+                <div id="res-qna" class="ai-res-content text-gray-400 italic">진단 전</div>
             </div>
         </div>
     </div>
 
-    <!-- 하단 -->
     <div class="ai-sidebar-footer">
-        <button
-            onclick="startAllPipelines()"
-            class="ai-run-btn">
-            통합 AI 진단 시작
+        <button onclick="startAllPipelines()" class="ai-run-btn">
+            🚀 통합 AI 진단 시작
         </button>
     </div>
 </aside>
 
-<style>
-.ai-sidebar{
-    position:fixed;
-    top:64px;
-    right:0;
-    width:200px;
-    height:calc(100vh - 64px);
-
-    background:#ffffff;
-    border-left:1px solid #e5e7eb;
-
-    z-index:9999;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* 상단 */
-.ai-sidebar-header{
-    height:60px;
-
-    border-bottom:1px solid #f1f5f9;
-
-    display:flex;
-    align-items:center;
-
-    padding:0 16px;
-
-    background:#fff;
-}
-
-.ai-live-wrap{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.ai-live-dot{
-    width:10px;
-    height:10px;
-
-    border-radius:999px;
-
-    background:#10b981;
-
-    animation:pulse 1.5s infinite;
-}
-
-.ai-title{
-    font-size:12px;
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    color:#047857;
-
-    text-transform:uppercase;
-}
-
-/* 스크롤 핵심 */
-.ai-sidebar-body{
-    position:absolute;
-
-    top:60px;
-    bottom:72px;
-
-    left:0;
-    right:0;
-
-    overflow-y:auto;
-
-    padding:16px;
-}
-
-/* 하단 */
-.ai-sidebar-footer{
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    height:72px;
-
-    border-top:1px solid #f1f5f9;
-
-    background:#fff;
-
-    display:flex;
-    align-items:center;
-
-    padding:16px;
-}
-
-/* 섹션 */
-.ai-section{
-    margin-bottom:24px;
-}
-
-.ai-label{
-    display:block;
-
-    font-size:11px;
-    font-weight:700;
-
-    color:#94a3b8;
-
-    margin-bottom:10px;
-
-    letter-spacing:1px;
-}
-
-/* 입력창 */
-.ai-textarea{
-    width:100%;
-
-    border:1px solid #d1d5db;
-
-    border-radius:14px;
-
-    padding:12px;
-
-    resize:none;
-
-    font-size:12px;
-
-    outline:none;
-
-    background:#f8fafc;
-}
-
-.ai-textarea:focus{
-    border-color:#10b981;
-
-    box-shadow:
-    0 0 0 3px rgba(16,185,129,0.15);
-}
-
-/* 파이프라인 */
-.ai-pipeline-list{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.ai-pipeline-card{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:14px;
-
-    border-radius:14px;
-
-    border:1px solid #e5e7eb;
-
-    background:#f9fafb;
-
-    cursor:pointer;
-
-    transition:0.2s;
-}
-
-.ai-pipeline-card:hover{
-    border-color:#10b981;
-    background:#ffffff;
-}
-
-/* 결과 */
-.ai-result-card{
-    background:#f9fafb;
-
-    border:1px solid #e5e7eb;
-
-    border-radius:14px;
-
-    padding:14px;
-
-    margin-bottom:14px;
-
-    font-size:12px;
-}
-
-.ai-result-title{
-    font-weight:700;
-
-    color:#64748b;
-
-    margin-bottom:10px;
-}
-
-/* 버튼 */
-.ai-run-btn{
-    width:100%;
-
-    height:42px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#10b981;
-
-    color:white;
-
-    font-size:12px;
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:0.2s;
-}
-
-.ai-run-btn:hover{
-    background:#059669;
-}
-
-/* 스크롤 */
-.custom-scrollbar::-webkit-scrollbar{
-    width:6px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb{
-    background:#cbd5e1;
-    border-radius:999px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track{
-    background:transparent;
-}
-
-/* 애니메이션 */
-@keyframes pulse{
-    0%{
-        transform:scale(1);
-        opacity:1;
-    }
-
-    50%{
-        transform:scale(1.4);
-        opacity:0.5;
-    }
-
-    100%{
-        transform:scale(1);
-        opacity:1;
-    }
-}
-</style>
-
 <script>
-function toggleDrawer(isOpen) {
-    const drawer = document.getElementById('ai-result-drawer');
-    if (isOpen) {
-        drawer.classList.remove('translate-x-full'); // 화면 좌측으로 밀고 나오기
-    } else {
-        drawer.classList.add('translate-x-full');    // 오른쪽 벽 뒤로 숨기기
-    }
-}
-
 const pipelineSteps = {
     'text-gen': { id: 'step-text-gen', endpoint: '/api/ai/text-gen', resId: 'res-text-gen' },
     'translation': { id: 'step-translation', endpoint: '/api/ai/translation', resId: 'res-translation' },
@@ -584,7 +171,7 @@ async function runPipelineBackend(key, text) {
         const data = await response.json();
 
         updateUIState(key, 'success');
-        renderResult(key, data); // 바로 우측 바 내부 매핑 창에 바인딩 처리
+        renderResult(key, data);
         return true;
     } catch (error) {
         console.error(error);
@@ -600,20 +187,16 @@ function updateUIState(key, state) {
     const badge = card.querySelector('.status-icon');
 
     if (state === 'ready') {
-        card.className = "flex items-center justify-between p-3 bg-gray-50 border border-gray-100 rounded-xl cursor-pointer hover:border-emerald-500 hover:bg-white transition-all duration-200 shadow-sm";
-        badge.className = "status-icon bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full font-medium text-[10px]";
+        card.className = "ai-pipeline-card status-ready";
         badge.innerHTML = "대기중";
     } else if (state === 'loading') {
-        card.className = "flex items-center justify-between p-3 bg-amber-50/70 border border-amber-400 rounded-xl cursor-pointer transition-all duration-200 shadow-sm";
-        badge.className = "status-icon bg-amber-500 text-white px-2 py-0.5 rounded-full font-semibold text-[10px] animate-pulse";
+        card.className = "ai-pipeline-card status-loading";
         badge.innerHTML = "⏳ 분석중";
     } else if (state === 'success') {
-        card.className = "flex items-center justify-between p-3 bg-emerald-50/50 border border-emerald-500 rounded-xl cursor-pointer transition-all duration-200 shadow-sm";
-        badge.className = "status-icon bg-emerald-600 text-white px-2 py-0.5 rounded-full font-bold text-[10px]";
+        card.className = "ai-pipeline-card status-success";
         badge.innerHTML = "✓ 완료";
     } else if (state === 'error') {
-        card.className = "flex items-center justify-between p-3 bg-red-50 border border-red-400 rounded-xl cursor-pointer transition-all duration-200 shadow-sm";
-        badge.className = "status-icon bg-red-500 text-white px-2 py-0.5 rounded-full font-semibold text-[10px]";
+        card.className = "ai-pipeline-card status-error";
         badge.innerHTML = "❌ 실패";
     }
 }
@@ -625,43 +208,39 @@ function renderResult(key, data) {
     resContainer.classList.remove('text-gray-400', 'italic');
     resContainer.classList.add('text-gray-800', 'font-medium');
 
-    // 1. 텍스트 생성 (기획서 명세: output_text 파싱)
     if (key === 'text-gen') {
-        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border leading-relaxed">${data.output_text}</p>`;
+        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border border-gray-100 shadow-inner leading-relaxed text-[11px] text-gray-700 m-0">${data.output_text}</p>`;
     }
-    // 2. 다국어 번역 (기획서 명세: translated_text 파싱)
     else if (key === 'translation') {
         resContainer.innerHTML = `
-            <div class="bg-white p-2 rounded border text-[10px] text-gray-400 mb-1">Language: ${data.src_lang} ➔ ${data.tgt_lang}</div>
-            <p class="bg-white p-2.5 rounded border text-emerald-700 font-semibold">${data.translated_text}</p>
+            <div class="text-[9px] text-gray-400 mb-1 font-mono">Language: ${data.src_lang} ➔ ${data.tgt_lang}</div>
+            <p class="bg-white p-2.5 rounded border border-gray-100 shadow-inner text-emerald-700 font-semibold text-[11px] m-0">${data.translated_text}</p>
         `;
     }
-    // 3. 감성 분석 (기획서 명세: label / score 파싱)
     else if (key === 'sentiment') {
-        const color = data.label.includes('긍정') ? 'text-blue-600' : 'text-red-600';
-        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border">결과: <span class="${color} font-bold">${data.label}</span> (신뢰도: <span class="underline">${data.score}점</span>)</p>`;
+        const isPositive = data.label.includes('긍정');
+        const colorClass = isPositive ? 'text-blue-600' : 'text-red-600';
+        resContainer.innerHTML = `<p class="bg-white p-2.5 rounded border border-gray-100 shadow-inner text-[11px] m-0">판정: <span class="${colorClass} font-bold">${data.label}</span><br>신뢰점수: <span class="font-mono underline">${data.score}점</span></p>`;
     }
-    // 4. 개체명 인식 (기획서 명세: entities 배열 파싱)
     else if (key === 'ner') {
         let tableHtml = `
-            <table class="w-full text-left border-collapse bg-white rounded border text-xs mt-1 shadow-sm">
+            <table class="w-full text-[10px] text-left border-collapse bg-white rounded border border-gray-100 shadow-inner mt-1">
                 <thead>
-                    <tr class="bg-gray-100 border-b text-gray-600"><th class="p-2">단어</th><th class="p-2">태그</th><th class="p-2">의미</th><th class="p-2">스코어</th></tr>
+                    <tr class="bg-gray-50 border-b text-gray-500 font-bold"><th class="p-1.5">단어</th><th class="p-1.5">태그</th><th class="p-1.5">의미</th></tr>
                 </thead>
                 <tbody>`;
         data.entities.forEach(item => {
-            tableHtml += `<tr class="border-b"><td class="p-2 font-bold text-gray-900">${item.word}</td><td class="p-2 text-red-500 font-semibold">${item.tag}</td><td class="p-2 text-gray-500">${item.meaning}</td><td class="p-2 text-emerald-600 font-mono">${item.score}</td></tr>`;
+            tableHtml += `<tr class="border-b hover:bg-gray-50/50"><td class="p-1.5 font-bold text-gray-800">${item.word}</td><td class="p-1.5 text-red-500 font-semibold">${item.tag}</td><td class="p-1.5 text-gray-400 text-[9px]">${item.meaning.split(' ')[0]}</td></tr>`;
         });
         tableHtml += `</tbody></table>`;
         resContainer.innerHTML = tableHtml;
     }
-    // 5. 질의응답 (기획서 명세: answer / score / start / end 파싱)
     else if (key === 'qna') {
         resContainer.innerHTML = `
-            <div class="bg-white p-3 rounded border shadow-sm space-y-1">
-                <span class="text-[10px] text-gray-400 block font-mono">좌표 [Position]: [${data.start} : ${data.end}]</span>
-                <p class="text-sm">추출된 정답: <span class="bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold border border-emerald-200">${data.answer}</span></p>
-                <p class="text-[11px] text-emerald-600">확신도 (Score): ${(data.score * 100).toFixed(2)}%</p>
+            <div class="bg-white p-2.5 rounded border border-gray-100 shadow-inner space-y-1 text-[11px]">
+                <div class="text-[9px] text-gray-400 font-mono">Index Position: [${data.start} : ${data.end}]</div>
+                <p class="m-0 font-medium">추출 정답: <span class="bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold border border-emerald-200">${data.answer}</span></p>
+                <p class="text-[10px] text-emerald-600 font-mono m-0">Confidence: ${(data.score * 100).toFixed(2)}%</p>
             </div>`;
     }
 }

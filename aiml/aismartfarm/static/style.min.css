@@ -1,6 +1,214 @@
   html, body, #container, #container > div {
+    margin-left: -30px;
     height: 100%;
   }
+
+  .ai-sidebar{
+    position:fixed;
+    top:64px;
+    left:0 !important;
+    width:200px;
+    height:calc(100vh - 64px);
+    background:#ffffff;
+    border-left:1px solid #e5e7eb;
+    z-index:9999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+body {
+    padding-left: 320px;
+}
+
+/* 상단 탑바(Nav)는 화면 전체를 써야 하므로 여백 계산에서 제외 처리 */
+nav {
+    margin-left: -320px;
+    width: calc(100% + 320px);
+}
+
+.ai-sidebar-header {
+    height: 54px;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.ai-live-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #10b981;
+    animation: pulse 1.8s infinite;
+}
+
+.ai-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #047857;
+    text-transform: uppercase;
+}
+
+.ai-sidebar-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    background: #fff;
+}
+
+.ai-sidebar-footer {
+    height: 72px;
+    border-top: 1px solid #f1f5f9;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    flex-shrink: 0;
+}
+
+.ai-section {
+    margin-bottom: 20px;
+}
+
+.ai-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.ai-textarea {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px;
+    resize: none;
+    font-size: 11px;
+    outline: none;
+    background: #f8fafc;
+    line-height: 1.5;
+}
+.ai-textarea:focus {
+    border-color: #10b981;
+    background: #fff;
+}
+
+.ai-pipeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ai-pipeline-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.ai-card-text {
+    pointer-events: none;
+}
+
+.status-ready {
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #374151;
+}
+.status-ready:hover {
+    border-color: #10b981;
+    background: #fff;
+}
+.status-loading {
+    border: 1px solid #f59e0b;
+    background: #fffbeb;
+    color: #b45309;
+}
+.status-success {
+    border: 1px solid #10b981;
+    background: #ecfdf5;
+    color: #065f46;
+}
+.status-error {
+    border: 1px solid #ef4444;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.status-icon {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 99px;
+    font-weight: 600;
+}
+.status-ready .status-icon { background: #e5e7eb; color: #4b5563; }
+.status-loading .status-icon { background: #f59e0b; color: #fff; }
+.status-success .status-icon { background: #10b981; color: #fff; }
+.status-error .status-icon { background: #ef4444; color: #fff; }
+
+.ai-result-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.ai-result-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.ai-res-content {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.ai-run-btn {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background: #10b981;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(16,185,129,0.2);
+    transition: all 0.2s;
+}
+.ai-run-btn:hover { background: #059669; }
+.ai-run-btn:active { transform: scale(0.98); }
+
+.custom-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
 
 /*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
 @layer properties;
