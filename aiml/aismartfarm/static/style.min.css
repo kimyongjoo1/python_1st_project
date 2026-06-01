@@ -200,6 +200,82 @@ nav {
 .ai-run-btn:hover { background: #059669; }
 .ai-run-btn:active { transform: scale(0.98); }
 
+/* ================================================================= */
+/* ================================================================= */
+
+/* 1. 슬라이더 본체 및 이미지 정밀 맞춤 */
+#paprikaCarousel {
+    width: 100% !important;
+    border-radius: 12px !important; /* 모서리를 둥글게 깎아 트렌디한 느낌 연출 */
+    overflow: hidden !important;
+    position: relative;
+}
+
+#paprikaCarousel .carousel-item {
+    height: 480px !important; /* 슬라이더 전체 높이를 고정하여 화면 요동 방지 */
+    background-color: #f8fafc; /* 이미지 로딩 전 부드러운 배경색 깔아두기 */
+}
+
+#paprikaCarousel .carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* ⭐ 가장 중요: 이미지 비율이 깨지지 않고 프레임에 꽉 차게 채움 */
+    object-position: center !important; /* 이미지의 정중앙을 기준으로 크롭 */
+}
+
+/* 2. 하단 도트(인디케이터) 커스텀 디자인 조정 */
+#paprikaCarousel .carousel-indicators {
+    bottom: 12px !important;
+    z-index: 10 !important;
+}
+
+#paprikaCarousel .carousel-indicators li {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important; /* 직사각형 도트를 동그란 원형으로 변경 */
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border: none !important;
+    margin: 0 5px !important;
+    transition: all 0.3s ease;
+}
+
+#paprikaCarousel .carousel-indicators .active {
+    width: 24px !important; /* 🔥 현재 보고 있는 슬라이드는 가로로 길어지는 최신 트렌드 디자인 적용 */
+    border-radius: 999px !important;
+    background-color: #10b981 !important; /* 파프리카 스마트팜 메인 에메랄드 컬러 매핑 */
+}
+
+/* 3. 좌우 이동 화살표 컨트롤러 감도 및 색상 보정 */
+#paprikaCarousel .carousel-control-prev,
+#paprikaCarousel .carousel-control-next {
+    width: 12% !important; /* 화살표 클릭 영역을 넉넉하게 잡아서 터치/클릭 감도 향상 */
+    z-index: 15 !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 슬라이더 위에 마우스를 올렸을 때만 좌우 화살표가 자연스럽게 나타나도록 UI 설계 */
+#paprikaCarousel:hover .carousel-control-prev,
+#paprikaCarousel:hover .carousel-control-next {
+    opacity: 0.8;
+}
+
+#paprikaCarousel .carousel-control-prev:hover,
+#paprikaCarousel .carousel-control-next:hover {
+    opacity: 1 !important;
+}
+
+/* 화살표 아이콘 뒤에 은은한 음영을 주어 하얀 이미지 위에서도 잘 보이도록 세팅 */
+#paprikaCarousel .carousel-control-prev-icon,
+#paprikaCarousel .carousel-control-next-icon {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 50% !important;
+    background-size: 55% !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .custom-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
 .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
