@@ -1,5 +1,5 @@
 # 파이썬 가상환경 및 캐시 파일 제외
-.venv/
+aiml/.venv/
 venv/
 __pycache__/
 *.pyc
