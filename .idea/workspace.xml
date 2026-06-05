@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c588dc7d-74a7-475d-a0c9-85ee9d927bee" name="변경" comment="" />
+    <list default="true" id="c588dc7d-74a7-475d-a0c9-85ee9d927bee" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/aiml/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +41,12 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\python_1st_document\aiml" />
+      <recent name="C:\python_1st_document" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
