@@ -1,6 +1,21 @@
-.idea/
-
+# 파이썬 가상환경 및 캐시 파일 제외
+.venv/
+venv/
 __pycache__/
 *.pyc
 
-.venv/
+# 로컬 개발 툴 및 OS 환경 파일 제외
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 데이터베이스 및 민감한 설정 파일 제외
+*.db
+*.log
+config.json
+.env
+
+# 허깅페이스 대형 모델 다운로드 캐시 제외 (용량 초과 방지)
+.cache/
+huggingface/
