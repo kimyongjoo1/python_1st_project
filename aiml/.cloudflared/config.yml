@@ -1,0 +1,7 @@
+tunnel: 2334bf86-7872-43b0-8aee-cadbbd6de1f5
+credentials-file: C:\python_1st_document\aiml\.cloudflared\2334bf86-7872-43b0-8aee-cadbbd6de1f5.json
+
+ingress:
+  - hostname: papserver.shop
+    service: http://localhost:80
+  - service: http_status:404
